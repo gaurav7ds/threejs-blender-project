@@ -1,0 +1,167 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html{
+  font-size: 62.5%;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+body{
+  color: var(--color-text);
+}
+
+:root{
+  /* light mode */
+  --color-black:#333332;
+  --primary-light-background:#faf4e5;
+  --pink-color:#e5a1aa;
+
+  /* dark mode */
+  --color-white:#faf4e5;
+  --primary-dark-background:#8395cd;
+
+}
+body.light{
+  --color-text: var(--color-black);
+  --color-background: var(--primary-light-background);
+  --color-pink :var(--pink-color);
+  --color-ball:var(--color-white);
+}
+body.dark{
+  --color-text: var(--color-white);
+  --color-background: var(--primary-dark-background);
+  --color-pink :#fff;
+  --color-ball:var(--primary-dark-background);
+}
+.page{
+  z-index: 999;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.page-wrapper{
+  position: relative;
+}
+section.hero{
+  width: 100%;
+  height: 100vh;
+  min-height: 100vh;
+  padding: 5rem;
+}
+.hero-wrapper{
+  position: relative;
+  height: 100%;
+  max-width: 150rem;
+  margin: 0 auto;
+
+}
+
+.hero-work{
+  position: absolute;
+  font-size: 5rem;
+  bottom: 5%;
+}
+.hero-name{
+  position: absolute;
+  font-size: 5rem;
+  top: 5%;
+  right: 3%;
+}
+
+.experience{
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+.experience-canvas{
+  width: 100%;
+  height: 100%;
+}
+.content{
+  width: 50%;
+  padding: 20rem 5rem;
+  background-color: var(--color-background);
+}
+.content-heading{
+  margin-bottom: 3rem;
+  font-size: 5rem;
+}
+.content-p{
+  font-size: 2rem;
+  line-height: 1.5;
+  p{
+    margin-bottom: 1rem;
+  }
+}
+.left{
+  margin-right: auto;
+}
+.right{
+  margin-left: auto;
+}
+
+.section-margin{
+  width: 100%;
+  height: 300rem;
+}
+
+.mode-wrapper{
+  position: fixed;
+  top: 5rem;
+  right: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+.sun ion-icon{
+  font-size: 2.5rem;
+  font-weight: bolder;
+}
+.moon ion-icon{
+  font-size: 2.3rem;
+  font-weight: bolder;
+}
+.toggler{
+  position: relative;
+  width: 6rem;
+  height: 3rem;
+  margin: 0 1rem;
+  cursor: pointer;
+}
+.toggle-bg{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--color-pink);
+  border-radius: 3rem;
+}
+.toggle-ball{
+  position: absolute;
+  top: .45rem;
+  left: .45rem;
+  width: 2.1rem;
+  height: 2.1rem;
+  background-color: var(--color-ball);
+  border-radius: 50%;
+  z-index: 33;
+  transition: all .3s;
+  pointer-events: none;
+}
+.toggle-ball.dark{
+  left: 3.33rem;
+}
+
+
+@media (max-width: 968px) {
+  .content{
+    width: 100%;
+  }
+}
